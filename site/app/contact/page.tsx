@@ -1,6 +1,27 @@
+import type { Metadata } from 'next';
 import { Instagram, Mail, MapPin, Phone, PinIcon, Video } from 'lucide-react';
 
 import { PageShell } from '@/components/page-shell';
+
+export const metadata: Metadata = {
+  title: 'Contact Saltwater Sessions | Book Surf Photography in Mount Maunganui',
+  description:
+    'Contact Saltwater Sessions to book surf photography, order fine art prints, or enquire about photography workshops in Mount Maunganui.',
+  alternates: {
+    canonical: 'https://saltwater-sessions.vercel.app/contact',
+  },
+  openGraph: {
+    title: 'Contact Saltwater Sessions | Book Surf Photography in Mount Maunganui',
+    description:
+      'Get in touch with Saltwater Sessions for print orders, workshop bookings, and coastal photography commissions in Mount Maunganui.',
+    url: 'https://saltwater-sessions.vercel.app/contact',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Saltwater Sessions | Book Surf Photography in Mount Maunganui',
+    description: 'Contact Saltwater Sessions for prints, workshops, and photography bookings.',
+  },
+};
 
 const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com', icon: Instagram },
@@ -15,7 +36,7 @@ export default function ContactPage() {
         <section className="bg-primary py-16 md:py-20">
           <div className="container-shell text-center">
             <p className="eyebrow text-mist">Get in touch</p>
-            <h1 className="mt-4 text-4xl text-secondary md:text-6xl">Print orders, workshop questions, and commissions start here.</h1>
+            <h1 className="mt-4 text-4xl text-secondary md:text-6xl">Contact Saltwater Sessions for prints, workshops, and commissions.</h1>
             <p className="mx-auto mt-6 max-w-3xl text-secondary/76">
               Reach out for availability, custom print advice, or upcoming session details. We’ll get back to you with clear next steps.
             </p>
@@ -100,7 +121,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-[32px] border border-primary/10 bg-mist/40 shadow-soft">
               <img
                 src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&h=700&fit=crop"
-                alt="Subtle coastal texture banner"
+                alt="Coastal texture banner for the Saltwater Sessions Mount Maunganui studio location"
                 className="h-48 w-full object-cover"
               />
               <div className="p-8">
@@ -117,7 +138,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-[32px] bg-primary shadow-medium">
               <img
                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000&h=700&fit=crop"
-                alt="Aerial coastline composition"
+                alt="Aerial coastal photography from Mount Maunganui shoreline"
                 className="h-52 w-full object-cover opacity-85"
               />
               <div className="p-8 text-secondary">
@@ -131,12 +152,16 @@ export default function ContactPage() {
         </section>
 
         <section className="bg-secondary pb-16 md:pb-24 lg:pb-32">
-          <div className="container-shell grid gap-4 md:grid-cols-4">
-            {['Mon–Thu: 10am–4pm', 'Fri: 10am–2pm', 'Sat: Workshop days only', 'Sun: Closed'].map((item) => (
-              <div key={item} className="rounded-xl border border-primary/10 bg-white px-5 py-5 shadow-soft">
-                <p className="text-primary/78">{item}</p>
-              </div>
-            ))}
+          <div className="container-shell">
+            <p className="eyebrow">Studio hours</p>
+            <h2 className="mt-4 text-4xl md:text-5xl">Studio hours</h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-4">
+              {['Mon–Thu: 10am–4pm', 'Fri: 10am–2pm', 'Sat: Workshop days only', 'Sun: Closed'].map((item) => (
+                <div key={item} className="rounded-xl border border-primary/10 bg-white px-5 py-5 shadow-soft">
+                  <p className="text-primary/78">{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>

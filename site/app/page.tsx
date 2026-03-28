@@ -1,44 +1,65 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { NewsletterSignup } from '@/components/newsletter-signup';
 import { PageShell } from '@/components/page-shell';
+
+export const metadata: Metadata = {
+  title: 'Surf Photography Mount Maunganui | Saltwater Sessions',
+  description:
+    'Explore surf photography in Mount Maunganui, limited-edition coastal prints, and ocean photography workshops with Saltwater Sessions.',
+  alternates: {
+    canonical: 'https://saltwater-sessions.vercel.app',
+  },
+  openGraph: {
+    title: 'Surf Photography Mount Maunganui | Saltwater Sessions',
+    description:
+      'Editorial surf photography, coastal fine art prints, and hands-on workshops from Mount Maunganui.',
+    url: 'https://saltwater-sessions.vercel.app',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Surf Photography Mount Maunganui | Saltwater Sessions',
+    description: 'Surf photography, fine art prints, and workshops from Mount Maunganui.',
+  },
+};
 
 const previewItems = [
   {
     title: 'Salt On Film',
     category: 'Lifestyle',
     image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=900&h=1200&fit=crop',
-    alt: 'Surfer lifestyle portrait in warm coastal light',
+    alt: 'Mount Maunganui surf photography portrait with warm coastal light',
   },
   {
     title: 'Hold The Edge',
     category: 'Surf',
     image: 'https://images.unsplash.com/photo-1468413253725-0d5181091126?w=900&h=1400&fit=crop',
-    alt: 'Surfer moving through breaking wave',
+    alt: 'Surf photography of a surfer moving through a breaking wave in Mount Maunganui',
   },
   {
     title: 'Amber Break',
     category: 'Ocean',
     image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&h=1100&fit=crop',
-    alt: 'Textured ocean surface at sunset',
+    alt: 'Ocean photography print showing textured water at sunset in New Zealand',
   },
   {
     title: 'Inside The Section',
     category: 'Surf',
     image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&h=1300&fit=crop',
-    alt: 'Wave action with sunlit spray',
+    alt: 'Mount Maunganui surf photography with wave action and sunlit spray',
   },
   {
     title: 'Sandbar Geometry',
     category: 'Aerial',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&h=1000&fit=crop',
-    alt: 'Aerial coastal patterns and sandbars',
+    alt: 'Aerial coastal photography print with sandbars and shoreline patterns',
   },
   {
     title: 'Boardwalk Quiet',
     category: 'Lifestyle',
     image: 'https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=900&h=1250&fit=crop',
-    alt: 'Figure walking near shoreline at dusk',
+    alt: 'Coastal lifestyle photography near Mount Maunganui shoreline at dusk',
   },
 ];
 
@@ -49,7 +70,7 @@ export default function HomePage() {
         <section className="relative flex min-h-screen items-end overflow-hidden bg-primary">
           <img
             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&h=2200&fit=crop"
-            alt="Golden light over ocean swell rolling toward shore"
+            alt="Mount Maunganui surf photography hero image with golden light over ocean swell"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/35 to-primary/10" />
@@ -58,7 +79,7 @@ export default function HomePage() {
             <div className="max-w-3xl reveal">
               <p className="eyebrow text-secondary/80">Mount Maunganui, New Zealand</p>
               <h1 className="mt-5 max-w-4xl font-heading text-5xl leading-[0.95] text-secondary md:text-7xl lg:text-[5.5rem]">
-                Surf culture, framed like fine art.
+                Surf photography in Mount Maunganui, framed like fine art.
               </h1>
               <p className="mt-6 max-w-2xl text-secondary/82">
                 Saltwater Sessions documents swell, stillness, and golden-hour texture from the shoreline to the sky. Limited-edition prints, gallery releases, and hands-on workshops for people who see the ocean as more than backdrop.
@@ -124,7 +145,7 @@ export default function HomePage() {
             <div className="image-lift h-full min-h-[320px] lg:min-h-[100%]">
               <img
                 src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&h=900&fit=crop"
-                alt="Photographer walking shoreline with camera gear at dusk"
+                alt="Mount Maunganui photography workshop scene with photographer walking the shoreline at dusk"
                 className="h-full w-full object-cover"
               />
             </div>

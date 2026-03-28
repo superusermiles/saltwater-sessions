@@ -1,4 +1,26 @@
+import type { Metadata } from 'next';
+
 import { PageShell } from '@/components/page-shell';
+
+export const metadata: Metadata = {
+  title: 'Fine Art Surf Prints in Mount Maunganui | Saltwater Sessions',
+  description:
+    'Order fine art surf prints in Mount Maunganui from Saltwater Sessions, with archival papers, framing options, and coastal photography editions.',
+  alternates: {
+    canonical: 'https://saltwater-sessions.vercel.app/prints',
+  },
+  openGraph: {
+    title: 'Fine Art Surf Prints in Mount Maunganui | Saltwater Sessions',
+    description:
+      'Discover archival coastal photography prints, framing options, and edition details from Saltwater Sessions.',
+    url: 'https://saltwater-sessions.vercel.app/prints',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fine Art Surf Prints in Mount Maunganui | Saltwater Sessions',
+    description: 'Shop fine art surf and coastal photography prints from Mount Maunganui.',
+  },
+};
 
 const processSteps = [
   {
@@ -32,7 +54,7 @@ export default function PrintsPage() {
           <div className="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <p className="eyebrow">Fine art prints</p>
-              <h1 className="mt-4 text-4xl md:text-6xl">Made to hold light long after the session ends.</h1>
+              <h1 className="mt-4 text-4xl md:text-6xl">Fine art surf prints in Mount Maunganui.</h1>
               <p className="mt-6 max-w-2xl text-primary/72">
                 Each print is produced using archival inks, exhibition-grade papers, and careful colour balancing to preserve the depth, softness, and movement of the original frame.
               </p>
@@ -40,7 +62,7 @@ export default function PrintsPage() {
             <div className="overflow-hidden rounded-[32px] shadow-medium">
               <img
                 src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1400&h=1000&fit=crop"
-                alt="Framed coastal print displayed in a calm interior"
+                alt="Framed Mount Maunganui coastal photography print displayed in a calm interior"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -65,7 +87,7 @@ export default function PrintsPage() {
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&h=900&fit=crop"
-                  alt="Desk and print material detail"
+                  alt="Fine art print materials and paper stock detail for coastal photography prints"
                   className="h-64 w-full object-cover"
                 />
               </div>
@@ -80,7 +102,7 @@ export default function PrintsPage() {
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1000&h=1200&fit=crop"
-                  alt="Interior crop featuring framed art"
+                  alt="Framed surf photography print styled for a Mount Maunganui interior"
                   className="h-64 w-full object-cover"
                 />
               </div>
@@ -109,7 +131,7 @@ export default function PrintsPage() {
                     className={`rounded-[32px] p-8 shadow-medium ${featured ? 'border border-accent bg-secondary text-primary' : 'border border-secondary/10 bg-white/6 text-secondary'}`}
                   >
                     <h3 className={`text-3xl ${featured ? 'text-primary' : 'text-secondary'}`}>{name}</h3>
-                    <p className={`mt-4 text-2xl ${featured ? 'text-accent' : 'text-accent'}`}>{price}</p>
+                    <p className="mt-4 text-2xl text-accent">{price}</p>
                     <p className={`mt-5 ${featured ? 'text-primary/72' : 'text-secondary/74'}`}>{details}</p>
                     <a href="/contact" className="button-primary mt-8 inline-flex">
                       Start your order

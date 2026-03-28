@@ -1,4 +1,26 @@
+import type { Metadata } from 'next';
+
 import { PageShell } from '@/components/page-shell';
+
+export const metadata: Metadata = {
+  title: 'Photography Workshops in Mount Maunganui | Saltwater Sessions',
+  description:
+    'Book photography workshops in Mount Maunganui with Saltwater Sessions to improve surf photography, ocean timing, and coastal composition.',
+  alternates: {
+    canonical: 'https://saltwater-sessions.vercel.app/workshops',
+  },
+  openGraph: {
+    title: 'Photography Workshops in Mount Maunganui | Saltwater Sessions',
+    description:
+      'Small-group photography workshops in Mount Maunganui focused on surf, ocean light, and coastal storytelling.',
+    url: 'https://saltwater-sessions.vercel.app/workshops',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Photography Workshops in Mount Maunganui | Saltwater Sessions',
+    description: 'Book Mount Maunganui photography workshops for surf and coastal shooting.',
+  },
+};
 
 const workshops = [
   {
@@ -54,14 +76,14 @@ export default function WorkshopsPage() {
         <section className="section-shell pb-12">
           <div className="container-shell text-center">
             <p className="eyebrow">In the field</p>
-            <h1 className="mx-auto mt-4 max-w-4xl text-4xl md:text-6xl">Small groups. Stronger images. Better timing.</h1>
+            <h1 className="mx-auto mt-4 max-w-4xl text-4xl md:text-6xl">Photography workshops in Mount Maunganui for stronger surf imagery.</h1>
             <p className="mx-auto mt-6 max-w-3xl text-primary/72">
               Saltwater Sessions workshops are designed for photographers who want to work closer to the water with more confidence, better judgement, and cleaner visual storytelling.
             </p>
             <div className="mt-10 overflow-hidden rounded-[32px] shadow-medium">
               <img
                 src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1200&h=900&fit=crop"
-                alt="Photographer preparing camera near surf at sunrise"
+                alt="Mount Maunganui photography workshop participant preparing a camera near the surf at sunrise"
                 className="h-[340px] w-full object-cover md:h-[440px]"
               />
             </div>
@@ -126,7 +148,7 @@ export default function WorkshopsPage() {
             <div className="overflow-hidden rounded-[32px] shadow-hard">
               <img
                 src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1600&h=900&fit=crop"
-                alt="Long rolling waves under moody coastal light"
+                alt="Ocean photography workshop backdrop with long rolling waves under moody coastal light"
                 className="h-full w-full object-cover"
               />
             </div>
